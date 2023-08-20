@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as *;
+
+[data-theme="dark"] {
+  --bg-page-color: #{$dark-color};
+  --bg-secondary-color: #{$bg-dark-secondary};
+  --font-main-color: #{$white-color};
+  --font-58-color: #{$dark-58-color-dark-theme};
+  --font-50-color: #{$dark-50-color-dark-theme};
+  --font-12-color: #{$dark-12-color-dark-theme};
+  --font-10-color: #{$dark-10-color-dark-theme};
+  --white-90-color: #{$white-90-color-dark-theme};
+  --white-80-color: #{$white-80-color-dark-theme};
+  --white-61-color: #{$white-61-color-dark-theme};
+  --white-40-color: #{$white-40-color-dark-theme};
+}

@@ -1,0 +1,39 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.main-container {
+  padding: 0 20px;
+  max-width: $xx-large;
+  margin: 0 auto;
+}
+
+.text-white {
+  color: $white-color;
+}
+
+.main-title,
+.section-title,
+.section-description {
+  letter-spacing: -1px;
+}
+.main-title,
+.section-title {
+  @include font-style(2rem, 36px);
+  font-weight: 700;
+}
+.section-description {
+  @include font-style(1rem, 24px);
+  color: var(--font-58-color);
+}
+
+@include from($x-large) {
+  .main-title {
+    @include font-style(3.5rem, 58px);
+  }
+  .section-title {
+    @include font-style(2.625rem, 48px);
+  }
+  .section-description {
+    @include font-style(1.25rem, 32px);
+  }
+}

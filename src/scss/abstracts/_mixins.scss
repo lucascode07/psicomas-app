@@ -1,0 +1,10 @@
+@mixin from($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin font-style($size, $line-height) {
+  font-size: $size;
+  line-height: $line-height;
+}

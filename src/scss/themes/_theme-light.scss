@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as *;
+
+:root {
+  --bg-page-color: #{$white-color};
+  --bg-secondary-color: #{$white-color};
+  --font-main-color: #{$dark-color};
+  --font-58-color: #{$dark-58-color};
+  --font-50-color: #{$dark-50-color};
+  --font-12-color: #{$dark-12-color};
+  --font-10-color: #{$dark-10-color};
+  --white-90-color: #{$white-90-color};
+  --white-80-color: #{$white-80-color};
+  --white-61-color: #{$white-61-color};
+  --white-40-color: #{$white-40-color};
+}

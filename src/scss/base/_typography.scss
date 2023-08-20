@@ -1,0 +1,27 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+@font-face {
+  font-family: $font-family-sofia;
+  src: url("/fonts/SofiaPro/Sofia-Pro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: $font-family-sofia;
+  src: url("/fonts/SofiaPro/Sofia-Pro-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: $font-family-sofia;
+  src: url("/fonts/SofiaPro/Sofia-Pro-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: $font-family-sofia;
+  src: url("/fonts/SofiaPro/Sofia-Pro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
+}
