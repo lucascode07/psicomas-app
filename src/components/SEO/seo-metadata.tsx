@@ -1,4 +1,4 @@
-import { getDefaultSeoData } from "@/services/contentful_queries";
+import { getDefaultSeoData } from "@/services/contentful-queries";
 
 const SeoMetadata = async () => {
 

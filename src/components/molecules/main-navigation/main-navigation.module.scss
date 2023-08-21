@@ -1,0 +1,18 @@
+@use "../../../scss/abstracts/" as *;
+
+.navigation {
+  display: none;
+  @include font-style(0.875rem, 20px);
+  font-weight: 600;
+  align-items: center;
+  column-gap: 48px;
+  letter-spacing: -0.5px;
+
+  .navigation__item {
+    color: var(--font-main-color);
+  }
+
+  @include from($large) {
+    display: flex;
+  }
+}

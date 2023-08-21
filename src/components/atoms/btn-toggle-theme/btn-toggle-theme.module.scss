@@ -1,0 +1,22 @@
+@use "../../../scss/abstracts/" as *;
+
+button.a_btn_toggle_theme {
+  padding: 0;
+  font-size: 1.5rem;
+  color: var(--font-main-color);
+  height: 30px;
+  width: 30px;
+
+  @include from($large) {
+    height: 36px;
+    width: 36px;
+    color: $white-color;
+    border: 1px solid $white-color;
+
+    &:hover {
+      background-color: $white-color;
+      color: $primary-color;
+      border-color: $white-color;
+    }
+  }
+}
