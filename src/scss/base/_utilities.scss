@@ -1,5 +1,4 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
+@use "../abstracts/" as *;
 
 .main-container {
   padding: 0 20px;
@@ -9,6 +8,22 @@
 
 .text-white {
   color: $white-color;
+}
+
+.block-overflow {
+  overflow: hidden;
+
+  @include from($large) {
+    overflow: auto;
+  }
+}
+
+.o_offcanvas_menu {
+  left: -100%;
+
+  &.o_offcanvas_menu--show {
+    left: 0;
+  }
 }
 
 .main-title,
