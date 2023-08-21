@@ -11,11 +11,10 @@ const BtnToggleTheme = () => {
     return (
         <button
             className={
-                `btn 
-                ${isDarkTheme ? 'btn-secondary' : ''}
-                ${styles.a_btn_toggle_theme}`
+                `btn ${isDarkTheme ? 'btn-secondary' : ''} ${styles.a_btn_toggle_theme}`
             }
-            onClick={toggleTheme}>
+            onClick={toggleTheme}
+            aria-label={`Cambiar al tema ${isDarkTheme ? 'claro' : 'oscuro'}`}>
             {
                 isDarkTheme
                     ? <i className='icon-sun'></i>
