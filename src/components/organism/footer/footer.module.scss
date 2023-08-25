@@ -1,0 +1,134 @@
+@use "../../../scss/abstracts/" as *;
+
+.o_footer {
+  background-color: $dark-color;
+  padding-bottom: 50px;
+
+  .section_footer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 46px;
+    padding-top: 72px;
+    margin-bottom: 116px;
+
+    .brand_info {
+      margin-bottom: 2px;
+
+      .brand_info__logo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 20px;
+        margin-bottom: 16px;
+
+        .logo_text {
+          @include font-style(2.25rem, 36px);
+          font-weight: 500;
+          letter-spacing: -1px;
+        }
+      }
+      .brand_info__slogan {
+        color: $white-80-color;
+        display: block;
+        @include font-style(1rem, 20px);
+        letter-spacing: -1px;
+        max-width: 316px;
+      }
+    }
+    .link_list {
+      .link_list__title {
+        color: $white-61-color;
+        @include font-style(2rem, 32px);
+        font-weight: 500;
+        letter-spacing: -1px;
+        margin-bottom: 36px;
+      }
+      .link_list__item {
+        color: $white-90-color;
+        @include font-style(1.25rem, 24px);
+        font-weight: 500;
+        letter-spacing: -1px;
+        list-style: none;
+        margin-bottom: 24px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        & a {
+          color: $white-90-color;
+        }
+
+        &.link_list__item--icon {
+          display: flex;
+          column-gap: 8px;
+        }
+
+        [class^="icon-"] {
+          color: $white-80-color;
+        }
+      }
+    }
+
+    @include from($medium) {
+      text-align: center;
+
+      .brand_info {
+        .brand_info__logo {
+          justify-content: center;
+        }
+        .brand_info__slogan {
+          margin: 0 auto;
+        }
+      }
+      .link_list {
+        .link_list__item {
+          &.link_list__item--icon {
+            justify-content: center;
+          }
+        }
+      }
+    }
+    @include from($x-large) {
+      text-align: left;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1104px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 78px;
+
+      .brand_info {
+        .brand_info__logo {
+          justify-content: flex-start;
+        }
+        .brand_info__slogan {
+          margin: unset;
+        }
+      }
+      .link_list {
+        .link_list__title  {
+          @include font-style(2.25rem, 36px);
+        }
+        .link_list__item {
+          &.link_list__item--icon {
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+  }
+  .footer__copyright {
+    color: $white-40-color;
+    display: block;
+    @include font-style(0.875rem, 14px);
+    font-weight: 500;
+    letter-spacing: -1px;
+    text-align: center;
+  }
+
+  @include from($x-large) {
+    padding-top: 80px;
+  }
+}

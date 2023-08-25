@@ -30,6 +30,7 @@
 .section-title,
 .section-description {
   letter-spacing: -1px;
+  text-align: center;
 }
 .main-title,
 .section-title {
@@ -39,6 +40,11 @@
 .section-description {
   @include font-style(1rem, 24px);
   color: var(--font-58-color);
+  margin-top: 8px;
+
+  &.text-white {
+    color: $white-80-color;
+  }
 }
 
 @include from($x-large) {

@@ -4,6 +4,7 @@ import ThemeScript from '@/context/theme-script';
 import PreloadLinks from '@/components/SEO/preload-links';
 import SeoMetadata from '@/components/SEO/seo-metadata';
 import Header from '@/components/organism/header/header';
+import Footer from '@/components/organism/footer/footer';
 
 interface LayoutProps {
   children: React.ReactNode
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: LayoutProps) {
         <ThemeProvider>
           <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
