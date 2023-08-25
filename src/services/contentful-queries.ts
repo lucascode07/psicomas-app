@@ -1,4 +1,5 @@
 import apolloClient from "@/context/apollo/apollo-client";
+import { FooterDataResponse } from "@/interfaces/footer-data.interface";
 import { HeaderDataResponse } from "@/interfaces/header-data.interface";
 import { DefaultSeoDataResponse } from "@/interfaces/seo-data.interface";
 import { gql } from "@apollo/client";
@@ -60,4 +61,47 @@ export async function getHeaderData() {
   });
 
   return data.headerSectionCollection.items[0];
+}
+
+export async function getFooterData() {
+  const { data }: FooterDataResponse = await apolloClient.query({
+    query: gql`
+      query FOOTER_SECTION_CONTENT {
+        contactSectionCollection {
+          items {
+            sectionInformation {
+              title
+              description
+              htmlId
+            }
+          }
+        }
+        footerSectionCollection {
+          items {
+            logoAlternativo {
+              imageFile {
+                url
+                width
+                height
+              }
+              altAttribute
+            }
+            slogan
+            linksCollection {
+              items {
+                text
+                link
+              }
+            }
+            contactInformation
+          }
+        }
+      }
+    `,
+  });
+
+  return {
+    contactContent: data.contactSectionCollection.items[0],
+    footerContent: data.footerSectionCollection.items[0],
+  };
 }

@@ -1,0 +1,22 @@
+@use "../../../scss/abstracts/" as *;
+
+.o_section_contact {
+  background-color: $primary-color;
+  max-width: 1255px;
+  margin: 0 auto;
+  padding: 72px 29px;
+
+  .contact_description {
+    @include font-style(1.25rem, 24px);
+    margin-bottom: 42px;
+  }
+
+  @include from($x-large) {
+    border-radius: 8px;
+    padding: 90px 76px;
+    
+    .contact_title, .contact_description {
+        text-align: left;
+    }
+  }
+}

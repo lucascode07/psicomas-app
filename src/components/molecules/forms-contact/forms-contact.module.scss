@@ -1,0 +1,51 @@
+@use "../../../scss/abstracts/" as *;
+
+.m_contact_forms {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  column-gap: 20px;
+
+  .form_item {
+    &:first-of-type {
+      flex: 1 0 317px;
+    }
+    &:last-of-type {
+      flex: 1 0 317px;
+    }
+  }
+
+  .contact_submit {
+    flex: 1 0 317px;
+    margin-top: 16px;
+    width: 100%;
+    height: 56px;
+  }
+
+  @include from($large) {
+    .form_item {
+      input {
+        height: 72px;
+      }
+    }
+    .contact_submit {
+      margin-top: 0;
+      height: 72px;
+    }
+  }
+  @include from($x-large) {
+    .form_item {
+      &:first-of-type {
+        max-width: 317px;
+      }
+      &:last-of-type {
+        max-width: 430px;
+      }
+    }
+    .contact_submit {
+      max-width: 317px;
+    }
+  }
+}

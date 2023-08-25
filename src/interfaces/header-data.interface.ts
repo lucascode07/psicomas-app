@@ -1,8 +1,8 @@
 export interface HeaderDataResponse {
-  data: Data;
+  data: HeaderData;
 }
 
-export interface Data {
+export interface HeaderData {
   headerSectionCollection: HeaderSectionCollection;
 }
 
