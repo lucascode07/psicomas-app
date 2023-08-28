@@ -1,8 +1,13 @@
+import MainSection from "@/components/organism/main-section/main-section";
+import { getHomePageData } from "@/services/contentful-queries";
+
 export default async function Home() {
+
+  const mainSectionData = await getHomePageData();
 
   return (
     <main>
-      <h1>Psicomas Archetype</h1>
+      <MainSection sectionData={mainSectionData} />
     </main>
   )
 }

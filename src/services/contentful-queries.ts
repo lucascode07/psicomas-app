@@ -1,6 +1,7 @@
 import apolloClient from "@/context/apollo/apollo-client";
 import { FooterDataResponse } from "@/interfaces/footer-data.interface";
 import { HeaderDataResponse } from "@/interfaces/header-data.interface";
+import { HomeDataResponse } from "@/interfaces/home-data.interface";
 import { DefaultSeoDataResponse } from "@/interfaces/seo-data.interface";
 import { gql } from "@apollo/client";
 
@@ -61,6 +62,37 @@ export async function getHeaderData() {
   });
 
   return data.headerSectionCollection.items[0];
+}
+
+export async function getHomePageData() {
+  const { data }: HomeDataResponse = await apolloClient.query({
+    query: gql`
+      query HOME_CONTENT {
+        mainSectionCollection {
+          items {
+            sectionInformation {
+              title
+              description
+            }
+            redirectLink {
+              text
+              link
+            }
+            image {
+              imageFile {
+                url
+                width
+                height
+              }
+              altAttribute
+            }
+          }
+        }
+      }
+    `,
+  });
+
+  return data.mainSectionCollection.items[0];
 }
 
 export async function getFooterData() {
