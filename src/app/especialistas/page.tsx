@@ -1,6 +1,6 @@
 const Especialistas = () => {
     return (
-        <h1>Especialistas</h1>
+        <h1 style={{ paddingTop: '68px'}}>Especialistas</h1>
     )
 }
 

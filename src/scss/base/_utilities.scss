@@ -40,7 +40,7 @@
 .section-description {
   @include font-style(1rem, 24px);
   color: var(--font-58-color);
-  margin-top: 8px;
+  margin-top: 4px;
 
   &.text-white {
     color: $white-80-color;

@@ -1,0 +1,117 @@
+@use "../../../scss/abstracts/" as *;
+
+.o_main_section {
+  padding-top: 24px;
+  position: relative;
+
+  .section_title {
+    text-align: left;
+  }
+  .section_description {
+    margin-top: 16px;
+    margin-bottom: 32px;
+    text-align: left;
+  }
+  a {
+    height: 56px;
+    max-width: 335px;
+  }
+  .section_image {
+    display: none;
+    position: relative;
+
+    img {
+      position: relative;
+    }
+  }
+  .section_advice {
+    color: var(--font-50-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 48px;
+
+    i {
+      font-size: 1.5rem;
+      position: relative;
+      animation: updown 2s infinite;
+
+      @keyframes updown {
+        0% {
+          bottom: 0;
+        }
+
+        50% {
+          bottom: 8px;
+        }
+
+        to {
+          bottom: 0;
+        }
+      }
+    }
+    small {
+      font-weight: 500;
+      @include font-style(1rem, 20px);
+      letter-spacing: -0.5px;
+    }
+  }
+
+  @include from($medium) {
+    a {
+      height: 72px;
+      margin: 0 auto;
+    }
+    .main_container {
+      padding: 0 168px;
+      position: relative;
+      z-index: 30;
+    }
+  }
+  @include from($large) {
+    a {
+      height: 72px;
+    }
+  }
+  @include from($x-large) {
+    background: linear-gradient(
+      90deg,
+      var(--bg-page-color) 63%,
+      $primary-color 47%
+    );
+    height: 100vh;
+    padding-top: 0;
+
+    .main_container {
+      display: flex;
+      align-items: center;
+      top: 50%;
+      translate: 0 -50%;
+      column-gap: 92px;
+
+      a {
+        max-width: 317px;
+        margin: 0;
+      }
+      .section_image {
+        display: block;
+        width: fit-content;
+        height: 499px;
+        border: 2px solid $white-color;
+        border-radius: 8px;
+
+        img {
+          right: 30px;
+          bottom: 30px;
+        }
+      }
+    }
+    .section_advice {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      translate: -50%;
+      margin-top: 0;
+    }
+  }
+}
