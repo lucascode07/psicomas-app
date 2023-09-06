@@ -1,0 +1,52 @@
+@use "../../../scss/abstracts/" as *;
+
+.m_card {
+  background-color: var(--bg-secondary-color);
+  border: 2px solid var(--font-5-color);
+  border-radius: 8px;
+  padding: 24px;
+  transition: box-shadow 0.25s ease;
+  min-width: 335px;
+  max-width: 354.67px;
+
+  .card_icon {
+    background-color: $primary-light-color;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 16px;
+    transition: background-color 0.25s ease;
+
+    i {
+      font-size: 2rem;
+      transition: color 0.25s ease;
+    }
+  }
+
+  h3 {
+    color: var(--font-main-color);
+    @include font-style(1.5rem, 28px);
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+  }
+  p {
+    color: var(--font-50-color);
+    @include font-style(1.25rem, 28px);
+    letter-spacing: -1px;
+  }
+
+  &:hover {
+    box-shadow: 0px 10px 100px 0px var(--font-5-color);
+
+    .card_icon {
+      background-color: $primary-color;
+
+      i {
+        color: $white-color;
+      }
+    }
+  }
+}
