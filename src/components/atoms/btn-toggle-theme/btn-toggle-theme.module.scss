@@ -7,7 +7,7 @@ button.a_btn_toggle_theme {
   height: 30px;
   width: 30px;
 
-  @include from($large) {
+  @include from($x-large) {
     height: 36px;
     width: 36px;
     color: $white-color;

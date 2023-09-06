@@ -32,7 +32,7 @@ const Header = async () => {
 
                 <div className={styles.o_header__actions}>
                     <BtnToggleTheme />
-                    <Link href={redirectLink.link} className={`btn btn-secondary ${styles.header_link}`}>
+                    <Link href={redirectLink.link} className={`btn ${styles.header_link}`}>
                         {redirectLink.text}
                     </Link>
                 </div>
