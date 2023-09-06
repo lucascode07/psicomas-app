@@ -17,6 +17,7 @@
   }
   .header_link {
     display: none;
+    background-color: $primary-color;
   }
 
   @include from($large) {
@@ -32,13 +33,20 @@
       translate: unset;
     }
     .header_link {
+      border: 1px solid $white-color;
       border-radius: 4px;
       display: flex;
       font-size: 0.875rem;
       height: 36px;
+
+      &:hover {
+        background-color: $white-color;
+        color: $primary-color;
+      }
     }
     .o_header__actions {
       display: flex;
+      align-items: center;
       column-gap: 8px;
     }
   }
