@@ -1,0 +1,39 @@
+@use "../../../scss/abstracts/" as *;
+
+.o_section_services {
+  padding-top: 84px;
+  padding-bottom: 57px;
+
+  .section_shape {
+    display: none;
+    width: 800px;
+    height: 742px;
+    border-radius: 8px;
+    border-left: 2px solid var(--font-10-color);
+    border-top: 2px solid var(--font-10-color);
+    border-bottom: 2px solid var(--font-10-color);
+    position: absolute;
+    left: 29%;
+    top: -219px;
+    z-index: 1;
+  }
+  .cards_grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 32px;
+    position: relative;
+    z-index: 30;
+  }
+
+  @include from($x-large) {
+    padding-bottom: 84px;
+    
+    .section_shape {
+      display: block;
+    }
+  }
+}

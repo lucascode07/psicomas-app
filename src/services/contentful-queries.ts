@@ -88,11 +88,29 @@ export async function getHomePageData() {
             }
           }
         }
+        servicesSectionCollection {
+          items {
+            sectionInformation {
+              title
+              description
+            }
+            cardsCollection {
+              items {
+                title
+                description
+                iconClass
+              }
+            }
+          }
+        }
       }
     `,
   });
 
-  return data.mainSectionCollection.items[0];
+  return {
+    mainSection: data.mainSectionCollection.items[0],
+    servicesSection: data.servicesSectionCollection.items[0],
+  };
 }
 
 export async function getFooterData() {

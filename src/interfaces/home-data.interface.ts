@@ -4,6 +4,7 @@ export interface HomeDataResponse {
 
 export interface HomeData {
   mainSectionCollection: MainSectionCollection;
+  servicesSectionCollection: ServicesSectionCollection;
 }
 
 export interface MainSectionCollection {
@@ -35,4 +36,23 @@ export interface RedirectLink {
 export interface SectionInformation {
   title: string;
   description: string;
+}
+
+export interface ServicesSectionCollection {
+  items: ServicesSectionCollectionItem[];
+}
+
+export interface ServicesSectionCollectionItem {
+  sectionInformation: SectionInformation;
+  cardsCollection: CardsCollection;
+}
+
+export interface CardsCollection {
+  items: CardsCollectionItem[];
+}
+
+export interface CardsCollectionItem {
+  title: string;
+  description: string;
+  iconClass: string;
 }

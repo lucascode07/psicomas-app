@@ -82,6 +82,17 @@
     height: 100vh;
     padding-top: 0;
 
+    &::after {
+      content: '';
+      width: 310px;
+      height: 140px;
+      background-color: $primary-color;
+      position: absolute;
+      bottom: 0;
+      left: 63%;
+      z-index: 20;
+    }
+
     .main_container {
       display: flex;
       align-items: center;
