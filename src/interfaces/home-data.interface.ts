@@ -36,6 +36,7 @@ export interface RedirectLink {
 export interface SectionInformation {
   title: string;
   description: string;
+  htmlId?: string;
 }
 
 export interface ServicesSectionCollection {

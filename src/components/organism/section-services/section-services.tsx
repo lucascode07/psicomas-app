@@ -8,7 +8,7 @@ interface Props {
 
 const ServicesSection = ({ sectionData }: Props) => {
     return (
-        <section className={styles.o_section_services}>
+        <section className={styles.o_section_services} id={sectionData.sectionInformation.htmlId}>
             <div className='main-container p-relative'>
                 <div className={styles.section_shape}></div>
                 <h2 className="section-title">
