@@ -93,6 +93,7 @@ export async function getHomePageData() {
             sectionInformation {
               title
               description
+              htmlId
             }
             cardsCollection {
               items {
