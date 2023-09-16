@@ -104,6 +104,19 @@ export async function getHomePageData() {
             }
           }
         }
+        professionalsSectionCollection {
+          items {
+            sectionInformation {
+              title
+              description
+              htmlId
+            }
+            redirectLink {
+              text
+              link
+            }
+          }
+        }
       }
     `,
   });
@@ -111,6 +124,7 @@ export async function getHomePageData() {
   return {
     mainSection: data.mainSectionCollection.items[0],
     servicesSection: data.servicesSectionCollection.items[0],
+    professionalsSection: data.professionalsSectionCollection.items[0],
   };
 }
 

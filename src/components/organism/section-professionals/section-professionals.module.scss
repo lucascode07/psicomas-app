@@ -1,0 +1,31 @@
+@use "../../../scss/abstracts/" as *;
+
+.o_section_pro {
+  background-color: $primary-color;
+  height: 476px;
+  padding-top: 56px;
+  margin-bottom: 668px;
+  position: relative;
+  z-index: 30;
+
+  .section_description {
+    width: 339px;
+    margin: 4px auto 0;
+  }
+  .section_link {
+    margin-top: 36px;
+    margin-bottom: 60px;
+    height: 56px;
+  }
+  .card_grid {
+  }
+
+  @include from($x-large) {
+    .section_description {
+      width: 100%;
+    }
+    .section_link {
+      height: 72px;
+    }
+  }
+}

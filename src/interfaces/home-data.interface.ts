@@ -5,6 +5,7 @@ export interface HomeDataResponse {
 export interface HomeData {
   mainSectionCollection: MainSectionCollection;
   servicesSectionCollection: ServicesSectionCollection;
+  professionalsSectionCollection: ProfessionalsSectionCollection;
 }
 
 export interface MainSectionCollection {
@@ -56,4 +57,13 @@ export interface CardsCollectionItem {
   title: string;
   description: string;
   iconClass: string;
+}
+
+export interface ProfessionalsSectionCollection {
+  items: ProfessionalsSectionCollectionItem[];
+}
+
+export interface ProfessionalsSectionCollectionItem {
+  sectionInformation: SectionInformation;
+  redirectLink: RedirectLink;
 }
