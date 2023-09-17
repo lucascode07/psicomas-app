@@ -1,0 +1,82 @@
+@use "../../../scss/abstracts/" as *;
+
+.m_card_professional {
+  background-color: var(--bg-secondary-color);
+  border-radius: 8px;
+  box-shadow: 0px 10px 200px 0px $dark-12-color;
+  padding: 36px 24px 24px;
+  text-align: center;
+  max-width: 335px;
+
+  img {
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .professional_name {
+    @include font-style(1.5rem, 28px);
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin: 16px 0 2px;
+  }
+  small {
+    color: $primary-color;
+    @include font-style(1rem, 18px);
+    font-weight: 500;
+    letter-spacing: -1px;
+  }
+  .professional_specialties {
+    color: var(--font-50-color);
+    @include font-style(1rem, 24px);
+    letter-spacing: -1px;
+    margin: 16px 0 24px;
+  }
+  .professional_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    color: $primary-color;
+    @include font-style(1rem, 24px);
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    position: relative;
+    transition: all 0.1s ease-in;
+
+    span,
+    i {
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  @include from($medium) {
+    max-width: 317px;
+
+    .professional_specialties {
+      @include font-style(1.25rem, 28px);
+    }
+  }
+  @include from($large) {
+    .professional_link {
+      color: var(--font-58-color);
+
+      i {
+        position: absolute;
+        right: 50%;
+        opacity: 0;
+        transform: translate(calc(50% + 60px));
+      }
+
+      &:hover {
+        color: $primary-color;
+
+        span {
+          transform: translate(-20px);
+        }
+        i {
+          transform: translate(calc(50% + 65px));
+          opacity: 100;
+        }
+      }
+    }
+  }
+}
