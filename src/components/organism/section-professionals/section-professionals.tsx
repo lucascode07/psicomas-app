@@ -27,6 +27,7 @@ const SectionProfessionals = ({ sectionData }: Props) => {
                     <CardProfessional />
                 </div>
             </div>
+            <div className={styles.section_shape}></div>
         </section>
     )
 }

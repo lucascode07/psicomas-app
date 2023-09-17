@@ -1,10 +1,14 @@
 @use "../../../scss/abstracts/" as *;
 
 .o_section_pro {
-  background-color: $primary-color;
-  height: 476px;
+  background: linear-gradient(
+    to bottom,
+    $primary-color 0,
+    $primary-color 476px,
+    transparent 476px,
+    transparent 100%
+  );
   padding-top: 56px;
-  margin-bottom: 668px;
   position: relative;
   z-index: 30;
 
@@ -13,11 +17,27 @@
     margin: 4px auto 0;
   }
   .section_link {
-    margin-top: 36px;
-    margin-bottom: 60px;
+    margin: 36px auto 60px;
     height: 56px;
+    max-width: 317px;
   }
   .card_grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    z-index: 10;
+  }
+  .section_shape {
+    background-color: var(--font-10-color);
+    display: none;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 75px;
+    z-index: 1;
   }
 
   @include from($x-large) {
@@ -26,6 +46,9 @@
     }
     .section_link {
       height: 72px;
+    }
+    .section_shape {
+      display: block;
     }
   }
 }
