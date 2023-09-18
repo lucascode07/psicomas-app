@@ -35,6 +35,8 @@
 .section-description {
   letter-spacing: -1px;
   text-align: center;
+  position: relative;
+  z-index: 30;
 }
 .main-title,
 .section-title {

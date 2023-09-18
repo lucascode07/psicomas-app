@@ -41,11 +41,14 @@
   }
 
   @include from($x-large) {
+    padding-top: 90px;
+
     .section_description {
       width: 100%;
     }
     .section_link {
       height: 72px;
+      margin-bottom: 79px;
     }
     .section_shape {
       display: block;

@@ -6,6 +6,7 @@ export interface HomeData {
   mainSectionCollection: MainSectionCollection;
   servicesSectionCollection: ServicesSectionCollection;
   professionalsSectionCollection: ProfessionalsSectionCollection;
+  attentionSectionCollection: AttentionSectionCollection;
 }
 
 export interface MainSectionCollection {
@@ -66,4 +67,22 @@ export interface ProfessionalsSectionCollection {
 export interface ProfessionalsSectionCollectionItem {
   sectionInformation: SectionInformation;
   redirectLink: RedirectLink;
+}
+
+export interface AttentionSectionCollection {
+  items: AttentionSectionCollectionItem[];
+}
+
+export interface AttentionSectionCollectionItem {
+  sectionInformation: SectionInformation;
+  image: Image;
+  specialitiesCollection: SpecialitiesCollection;
+}
+export interface SpecialitiesCollection {
+  items: SpecialitiesCollectionItem[];
+}
+
+export interface SpecialitiesCollectionItem {
+  text: any;
+  image: Image;
 }
