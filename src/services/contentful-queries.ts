@@ -117,6 +117,38 @@ export async function getHomePageData() {
             }
           }
         }
+        attentionSectionCollection {
+          items {
+            sectionInformation {
+              title
+              description
+              htmlId
+            }
+            image {
+              imageFile {
+                url
+                width
+                height
+              }
+              altAttribute
+            }
+            specialitiesCollection {
+              items {
+                text {
+                  json
+                }
+                image {
+                  altAttribute
+                  imageFile {
+                    url
+                    width
+                    height
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     `,
   });
@@ -125,6 +157,7 @@ export async function getHomePageData() {
     mainSection: data.mainSectionCollection.items[0],
     servicesSection: data.servicesSectionCollection.items[0],
     professionalsSection: data.professionalsSectionCollection.items[0],
+    attentionSection: data.attentionSectionCollection.items[0],
   };
 }
 

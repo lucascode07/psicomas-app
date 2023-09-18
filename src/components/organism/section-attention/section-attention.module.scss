@@ -1,0 +1,132 @@
+@use "../../../scss/abstracts/" as *;
+
+.o_section_attention {
+  padding: 92px 0 70px;
+
+  .section_shape,
+  .section_shape_2 {
+    display: none;
+  }
+  .section_container {
+    margin-top: 60px;
+
+    .specialties_group {
+      text-align: center;
+
+      .specialties_group__item {
+        margin-bottom: 72px;
+
+        img {
+          width: auto;
+          height: 120px;
+          margin-bottom: 16px;
+        }
+        p {
+          @include font-style(1.5rem, 32px);
+          letter-spacing: -1px;
+
+          strong {
+            font-size: 2rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .section_main_image {
+      margin-top: 150px;
+      border: 2px solid $primary-color;
+      border-radius: 8px;
+      max-width: 333px;
+      height: 428px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+
+      img {
+        max-width: 310px;
+        height: 477px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.2s ease;
+      }
+    }
+  }
+
+  @include from($medium) {
+    .section_container {
+      .section_main_image {
+        max-width: 458px;
+        height: 589px;
+
+        img {
+          max-width: 426px;
+          height: 656px;
+        }
+      }
+    }
+  }
+  @include from($x-large) {
+    padding-top: 160px;
+    padding-bottom: 194px;
+    position: relative;
+
+    .section_shape,
+    .section_shape_2 {
+      display: block;
+    }
+    .section_shape {
+      position: absolute;
+      right: 50%;
+      bottom: -47px;
+      border: 2px solid var(--font-10-color);
+      border-radius: 8px;
+      border-left: 0;
+      transform: translate(353px);
+      width: 100%;
+      height: 1405px;
+      z-index: 1;
+    }
+    .section_shape_2 {
+      background-color: var(--font-10-color);
+      display: block;
+      position: absolute;
+      bottom: 105px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+    }
+
+    .section_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 104px;
+      margin-top: 117px;
+      position: relative;
+      z-index: 30;
+
+      .specialties_group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 44px 72px;
+
+        .specialties_group__item {
+          margin: 0;
+
+          &:nth-child(2),
+          &:nth-child(4) {
+            margin-top: 88px;
+          }
+        }
+      }
+
+      .section_main_image {
+        margin: 0;
+        width: 458px;
+      }
+    }
+  }
+}
