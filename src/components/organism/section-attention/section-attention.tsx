@@ -16,7 +16,7 @@ const options = {
 
 const SectionAttention = ({ sectionData }: Props) => {
     return (
-        <section className={styles.o_section_attention}>
+        <section className={styles.o_section_attention} id={sectionData.sectionInformation.htmlId}>
             <div className={styles.section_shape}></div>
             <div className='main-container'>
                 <h2 className="section-title">

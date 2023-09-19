@@ -8,7 +8,7 @@ interface Props {
 
 const SectionContact = ({ contactContent }: Props) => {
   return (
-    <section className={styles.o_section_contact}>
+    <section className={styles.o_section_contact} id={contactContent.sectionInformation.htmlId}>
       <h2 className={`section-title text-white ${styles.contact_title}`}>
         {contactContent.sectionInformation.title}
       </h2>

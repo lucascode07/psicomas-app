@@ -1,0 +1,101 @@
+@use "../../../scss/abstracts/" as *;
+
+.o_section_plan {
+  padding-top: 92px;
+  padding-bottom: 72px;
+
+  .section_container {
+    position: relative;
+
+    .section_shape {
+      display: none;
+      position: absolute;
+      bottom: -200px;
+      left: 107px;
+      height: 1000px;
+      width: 2px;
+      background-color: var(--font-10-color);
+    }
+  }
+
+  .card_promo {
+    background-color: var(--bg-secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 10px 200px #000a141f;
+    margin: 56px auto 0;
+    max-width: 446px;
+    padding: 36px 32px 48px;
+    width: 100%;
+
+    .card_promo__heading {
+      text-align: center;
+
+      h3 {
+        color: $primary-color;
+        @include font-style(1.5rem, 36px);
+        letter-spacing: -1px;
+      }
+      h4 {
+        margin-top: 12px;
+        @include font-style(3rem, 48px);
+        letter-spacing: -2px;
+
+        sup {
+          @include font-style(1.875rem, 48px);
+          font-weight: 900;
+        }
+      }
+      small {
+        display: block;
+        color: var(--font-50-color);
+        @include font-style(0.875rem, 16px);
+        letter-spacing: -1px;
+        margin-top: 4px;
+      }
+    }
+    ul {
+      list-style: none;
+      @include font-style(1.25rem, 28px);
+      letter-spacing: -1px;
+      margin-top: 24px;
+      margin-bottom: 42px;
+
+      li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 12px;
+
+        span {
+          display: block;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: $primary-color;
+        }
+      }
+    }
+    .btn_redirect {
+      height: 56px;
+    }
+  }
+
+  @include from($large) {
+    .card_promo {
+      .btn_redirect {
+        height: 72px;
+      }
+    }
+  }
+  @include from($x-large) {
+    padding-top: 54px;
+    padding-bottom: 120px;
+
+    .section_container {
+      .section_shape {
+        display: block;
+      }
+    }
+  }
+}

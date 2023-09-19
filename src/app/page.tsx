@@ -1,5 +1,6 @@
 import MainSection from "@/components/organism/main-section/main-section";
 import SectionAttention from "@/components/organism/section-attention/section-attention";
+import SectionPlan from "@/components/organism/section-plan/section-plan";
 import SectionProfessionals from "@/components/organism/section-professionals/section-professionals";
 import ServicesSection from "@/components/organism/section-services/section-services";
 import SectionSteps from "@/components/organism/section-steps/section-steps";
@@ -13,6 +14,7 @@ export default async function Home() {
     professionalsSection,
     attentionSection,
     stepsSection,
+    paymentPlanSection
   } = await getHomePageData();
 
   return (
@@ -22,6 +24,7 @@ export default async function Home() {
       <SectionProfessionals sectionData={professionalsSection} />
       <SectionAttention sectionData={attentionSection} />
       <SectionSteps sectionData={stepsSection} />
+      <SectionPlan sectionData={paymentPlanSection} />
     </main>
   )
 }

@@ -8,6 +8,7 @@ export interface HomeData {
   professionalsSectionCollection: ProfessionalsSectionCollection;
   attentionSectionCollection: AttentionSectionCollection;
   stepsSectionCollection: StepsSectionCollection;
+  paymentPlanSectionCollection: PaymentPlanSectionCollection;
 }
 
 export interface MainSectionCollection {
@@ -95,4 +96,15 @@ export interface StepsSectionCollection {
 export interface StepsSectionCollectionItem {
   sectionInformation: SectionInformation;
   cardsCollection: CardsCollection;
+}
+
+export interface PaymentPlanSectionCollection {
+  items: PaymentPlanSectionCollectionItem[];
+}
+export interface PaymentPlanSectionCollectionItem {
+  price: string;
+  shortMessage: string;
+  benefits: string[];
+  sectionInformation: SectionInformation;
+  redirectLink: RedirectLink;
 }
