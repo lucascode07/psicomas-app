@@ -1,6 +1,6 @@
 const Especialistas = () => {
     return (
-        <h1 style={{ paddingTop: '68px'}}>Especialistas</h1>
+        <h1 style={{ padding: '120px 60px 60px', textAlign: 'center'}}>Especialistas</h1>
     )
 }
 

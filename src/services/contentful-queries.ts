@@ -163,6 +163,22 @@ export async function getHomePageData() {
             }
           }
         }
+        paymentPlanSectionCollection {
+          items {
+            sectionInformation {
+              title
+              description
+              htmlId
+            }
+            price
+            shortMessage
+            benefits
+            redirectLink {
+              text
+              link
+            }
+          }
+        }
       }
     `,
   });
@@ -173,6 +189,7 @@ export async function getHomePageData() {
     professionalsSection: data.professionalsSectionCollection.items[0],
     attentionSection: data.attentionSectionCollection.items[0],
     stepsSection: data.stepsSectionCollection.items[0],
+    paymentPlanSection: data.paymentPlanSectionCollection.items[0],
   };
 }
 
