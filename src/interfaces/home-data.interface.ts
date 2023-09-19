@@ -7,6 +7,7 @@ export interface HomeData {
   servicesSectionCollection: ServicesSectionCollection;
   professionalsSectionCollection: ProfessionalsSectionCollection;
   attentionSectionCollection: AttentionSectionCollection;
+  stepsSectionCollection: StepsSectionCollection;
 }
 
 export interface MainSectionCollection {
@@ -85,4 +86,13 @@ export interface SpecialitiesCollection {
 export interface SpecialitiesCollectionItem {
   text: any;
   image: Image;
+}
+
+export interface StepsSectionCollection {
+  items: StepsSectionCollectionItem[];
+}
+
+export interface StepsSectionCollectionItem {
+  sectionInformation: SectionInformation;
+  cardsCollection: CardsCollection;
 }

@@ -149,6 +149,20 @@ export async function getHomePageData() {
             }
           }
         }
+        stepsSectionCollection {
+          items {
+            sectionInformation {
+              title
+              description
+            }
+            cardsCollection {
+              items {
+                title
+                description
+              }
+            }
+          }
+        }
       }
     `,
   });
@@ -158,6 +172,7 @@ export async function getHomePageData() {
     servicesSection: data.servicesSectionCollection.items[0],
     professionalsSection: data.professionalsSectionCollection.items[0],
     attentionSection: data.attentionSectionCollection.items[0],
+    stepsSection: data.stepsSectionCollection.items[0],
   };
 }
 

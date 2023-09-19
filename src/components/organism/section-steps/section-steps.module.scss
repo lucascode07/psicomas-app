@@ -1,0 +1,89 @@
+@use "../../../scss/abstracts/" as *;
+
+.o_section_steps {
+  background: linear-gradient(
+    to bottom,
+    $primary-color 0,
+    $primary-color 324px,
+    transparent 324px,
+    transparent 100%
+  );
+  padding-top: 56px;
+  position: relative;
+  z-index: 10;
+
+  .steps_grid_card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 44px;
+    gap: 20px 24px;
+
+    .steps_grid_card__item {
+      background-color: var(--bg-secondary-color);
+      border-radius: 8px;
+      box-shadow: 0 10px 200px $dark-12-color;
+      width: 100%;
+      max-width: 350px;
+      padding: 24px;
+      letter-spacing: -1px;
+
+      .card_number {
+        background-color: $primary-light-color;
+        border-radius: 50%;
+        color: $primary-color;
+        font-weight: 700;
+        @include font-style(1.25rem, 48px);
+        width: 48px;
+        height: 48px;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      h3 {
+        font-weight: 600;
+        @include font-style(1.5rem, 28px);
+        color: var(--dark-color);
+      }
+      p {
+        color: var(--font-50-color);
+        @include font-style(1.25rem, 28px);
+        margin-top: 12px;
+      }
+    }
+  }
+
+  @include from($x-large) {
+    background: linear-gradient(
+      to bottom,
+      $primary-color 0,
+      $primary-color 350px,
+      transparent 350px,
+      transparent 100%
+    );
+    padding-top: 90px;
+    padding-bottom: 66px;
+
+    &::before {
+      content: "";
+      background-color: var(--font-10-color);
+      display: block;
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .steps_grid_card {
+      margin-top: 61px;
+
+      .steps_grid_card__item {
+        .card_number {
+          width: 52px;
+          height: 52px;
+          line-height: 52px;
+        }
+      }
+    }
+  }
+}
