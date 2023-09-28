@@ -7,7 +7,7 @@ interface Props {
 
 const Card = ({ cardData }: Props) => {
     return (
-        <div className={styles.m_card}>
+        <div className={`${styles.m_card} load-hidden`}>
             <div className={styles.card_icon}>
                 <i className={cardData.iconClass}></i>
             </div>
