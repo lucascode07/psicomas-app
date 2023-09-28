@@ -26,7 +26,7 @@ const Footer = async () => {
                     <small className={`${styles.brand_info__slogan}`}>{slogan}</small>
                 </div>
                 <div className={styles.link_list}>
-                    <h5 className={styles.link_list__title}>Acerca de</h5>
+                    <p className={styles.link_list__title}>Acerca de</p>
                     <ul>
                         {
                             linksCollection.items.map(linkItem => (
@@ -40,7 +40,7 @@ const Footer = async () => {
                     </ul>
                 </div>
                 <div className={styles.link_list}>
-                    <h5 className={styles.link_list__title}>Contacto</h5>
+                    <p className={styles.link_list__title}>Contacto</p>
                     <ul>
                         <li className={`${styles.link_list__item} ${styles['link_list__item--icon']}`}>
                             <i className='icon-location-mark'></i>
