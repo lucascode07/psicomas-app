@@ -19,29 +19,29 @@ To be able to start development on Psicomás Web make sure that you have the fol
 
 Then you can run this command:
 
-bash
+```bash
   npm install
-
+```
 
 ## Usage
 
 Runs the app in the development mode.
 
-bash
+```bash
   npm run dev
-
+```
 
 Builds the app for production to the `out` folder.
 
-bash
+```bash
   npm run build
-
+```
 
 Runs a local server to preview the build
 
-bash
+```bash
   npm run start
-
+```
 
 ## Development Skills
 
