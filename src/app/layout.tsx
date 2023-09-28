@@ -12,7 +12,7 @@ interface LayoutProps {
 
 export default function RootLayout({ children }: LayoutProps) {
   return (
-    <html lang="es" data-theme="light" suppressHydrationWarning>
+    <html lang="es" data-theme="light" suppressHydrationWarning className='sr'>
       <head>
         <PreloadLinks />
         <SeoMetadata />
