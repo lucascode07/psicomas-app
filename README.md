@@ -1,34 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <a href="https://psicomas-web.vercel.app/">
+    <img alt="Psicomas Logo" src="https://images.ctfassets.net/k7hhto0tr08t/3RiaQwjslFwqNn5OkSav9B/ae60bd892957d96ef9e9ac4f2f60d34c/logo_psicomas.svg" width="80" />
+  </a>
+</p>
+<h1 align="center">
+  Psicomás Web
+</h1>
 
-## Getting Started
+<p align="center">
+  <i>Peruvian platform that provides therapeutic help online</i>
+</p>
 
-First, run the development server:
+## Installation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+To be able to start development on Psicomás Web make sure that you have the following pre-requisites installed:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Node.js v18.16.0 or higher
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Then you can run this command:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+bash
+  npm install
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Runs the app in the development mode.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+bash
+  npm run dev
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Builds the app for production to the `out` folder.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+bash
+  npm run build
+
+
+Runs a local server to preview the build
+
+bash
+  npm run start
+
+
+## Development Skills
+
+- React JS
+- Next JS 13.4+
+- GraphQL
+- Contentful CMS
+- Apollo client
+- Scss
+- Mobile First
+- Responsive Design
+- Atomic Design
+- Scroll Reveal
+- SEO (meta tags, sitemap.xml, robots.txt)
+- Performance and Accesibility (ARIA atributes)
+- Dark and light mode
+- Trunk base development
+- Conventional commits
+- Continuous Integration: **Github - Netlify** and **Github - Vercel**
+
+## Demo
+
+- [Psicomás Web](https://psicomas-web.vercel.app/)
+
+## Authors
+
+- [@lucascode07](https://www.github.com/lucascode07) - Lucas Barrenechea
