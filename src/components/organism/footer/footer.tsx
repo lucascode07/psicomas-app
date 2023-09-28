@@ -21,7 +21,7 @@ const Footer = async () => {
                             alt={logoAlternativo.altAttribute}
                             width={logoAlternativo.imageFile.width}
                             height={logoAlternativo.imageFile.height} />
-                        <h4 className={`text-white ${styles.logo_text}`}>Psicomás</h4>
+                        <p className={`text-white ${styles.logo_text}`}>Psicomás</p>
                     </div>
                     <small className={`${styles.brand_info__slogan}`}>{slogan}</small>
                 </div>
